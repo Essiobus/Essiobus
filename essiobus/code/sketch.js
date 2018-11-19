@@ -18,6 +18,6 @@ image(img, 0, 0);
 }
 
 function test(){
-"alert('dfghjk');"
- createCanvas(400,400)
+alert('dfghjk');
+document.location.href="home.html"
 }
