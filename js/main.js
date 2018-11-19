@@ -1,29 +1,31 @@
+var emitter;
+var img;
+function preload() {
 
-var game = new Phaser.Game(config);
+   img = loadImage("assets/test.png")
 
-var config = {
-    width: 1280,
-    height: 720,
-    type: Phaser.WEBGL,
-    scene: {
-        preload: preload,
-        create: create,
-    }
-};
+}
 
-var objects = {};
-function preload (){
+function create() {
+    
+var test = game.add.image(0, 0, 'test');
     
 }
 
-function create (){
+function dropSprite (pointer) {
     
-    objects.setBackgroundColor('rgba(255, 0, 0, 0.5)');
+
 }
 
-    
+function update() {
 
 
+}
+
+function render() {
 
 
-                               
+}
+function draw(){
+    image(img, 0,0);
+}
