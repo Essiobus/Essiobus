@@ -14,13 +14,13 @@ close = createImg(croix, 'closeicon');
 function setup() {
 createCanvas(800, 600);
   help.position(50,500).mousePressed(helpicon);
-  close.position(750, 0).mousePressed(helpicon);
+  close.position(750, 0, 20,20).mousePressed(closeicon);
 }
 
 function draw() {
 background(0);
 image(fond, 0, 0);
-image(close, 0,0,20,20);
+image(close, 500,0,20,20);
 }
 
 function helpicon(){
@@ -28,5 +28,5 @@ function helpicon(){
 }
 
 function closeicon(){
-   
+   window.open("game.html");
 }
