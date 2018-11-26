@@ -3,7 +3,7 @@ var CroixFermer;
 const croix = "images/croix2.png";
 
 function preload() {
-fond = loadImage("images/Informations.png");
+fond = loadImage("images/InformationsV2.png");
 CroixFermer = createImg(croix, 'fermer');
 }
 function setup() {
