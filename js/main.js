@@ -1,1 +1,0 @@
-Essiobus = new phaserGame(1280,720);
