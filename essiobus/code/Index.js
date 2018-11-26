@@ -26,7 +26,7 @@ image(fond, 0, 0);
 
 function info(){
 //alert('Ça marche');
-document.location.href="info.html"
+window.open("info.html");
 }
 
 function debutJeu(){

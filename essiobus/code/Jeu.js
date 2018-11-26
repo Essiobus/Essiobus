@@ -19,5 +19,8 @@ image(fondHome, 0, 0);
 
 function fermer(){
 //alert('Ça marche fraté');
-document.location.href="fin.html";
+if(confirm('Voulez-vous réellement quitter la partie ?')){
+  document.location.href="fin.html";
+};
+
 }
