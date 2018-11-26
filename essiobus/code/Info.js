@@ -19,5 +19,5 @@ image(fond, 0, 0);
 
 function fermer(){
 //alert('Ça marche fraté');
-document.location.href="index.html";
+window.close();
 }
