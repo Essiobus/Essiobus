@@ -46,6 +46,7 @@ function clignottement(){
 }
 
 function incident(){
+  window.open("enigme1.html")
    alert('Nombre alerte : '+EventCount);
    if (EventCount >= 3) {
       clearInterval(timedevent); //stop l'intervale
