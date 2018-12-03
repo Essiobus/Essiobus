@@ -8,16 +8,18 @@ const warningpanel = "images/incident.png";
 const croix = "images/croix2.png";
 const aide = "images/PanalAide.png";
 const arret = "images/arret.png";
-
-var enigmes = ['eventwarning','eventstop'];
+var Largeur = [130 , 200, 270, 340, 410, 480, 550, 620, 690];
+var Hauteur = [77 , 137, 197, 257, 317, 377];
 var randomevent;
-randomevent = int(random(0,1));
-var randomtime = getRndInteger(1000,5000);
-var generateevent = engimes[randomevent];
-alert('e');
-
-//demarre l'intervale en appelant la fonction qui sera executé et son temps d'execution
-var timedevent = setInterval((enigmes[randomevent]),randomtime); 
+// 77 : Ligne rouge
+// 137 : Ligne Orange
+// 197 : Ligne Jaune
+// 257 : Ligne verte
+// 317 : Ligne bleue
+// 377 : Ligne rose
+ var randomtime = getRndInteger(1000,5000);
+  //demarre l'intervale en appelant la fonction qui sera executé et son temps d'execution
+  var timedevent;
 
 function preload() {
 fondHome = loadImage("images/Jeu.png");
@@ -29,12 +31,26 @@ function setup() {
 createCanvas(800, 600);
    CroixFermer.position(772,4).mousePressed(fermer);
    help.position(350,480).mousePressed(info);
-}
 
+}
 function draw() {
    background(0);
    image(fondHome, 0, 0);
+     
+  frameRate(5);
+  randomevent = int(random(0,100));
+  if(randomevent % 2 === 0 ){
+    timedevent = setInterval(eventstop,randomtime);
+    randomtime = getRndInteger(1000,5000);
+  }
+  else{
+    timedevent = setInterval(eventwarning,randomtime);
+    randomtime = getRndInteger(1000,5000);
+  }
+  
+  //text(randomevent,500,600);
 }
+
 
 function fermer(){
 //alert('Ça marche fraté');
@@ -51,30 +67,18 @@ window.open("info.html");
 function incident(){
   //window.open("enigme1.html")
    alert('Nombre alerte : '+EventCount);
-   if (EventCount >= 3) {
-      clearInterval(timedevent); //stop l'intervale
-   }
-   else{
-   EventCount += 1;
-   }
 }
 
 function stoptest(){
    alert(' Nombre d"alerte' +EventCount);
-   if (EventCount >= 3) {
-      clearInterval(timedevent); //stop l'intervale
-   }
-   else{
-   EventCount += 1;
-   }
+
 }
 
 function eventstop(){
    stop = createImg(arret,'stoptest');
-   stop.position(100,190).mousePressed(stoptest);
+   stop.position(Largeur[int(random(0,9))],Hauteur[int(random(0,6))]).mousePressed(stoptest);
     
    if (EventCount >= 3) {
-      clearInterval(timedevent); //stop l'intervale
       stop.hide();
    }
    else{
@@ -84,14 +88,13 @@ function eventstop(){
 
 function eventwarning(){
    warning = createImg(warningpanel,'incident');
-   warning.position(50,190).mousePressed(incident);
+   warning.position(Largeur[int(random(0,9))],Hauteur[int(random(0,6))]).mousePressed(incident);
    
-  
-   if(EventCount >= 3){
-      clearInterval(timedevent); //stop l'intervale
+    if (EventCount >= 3) {
+      warning.hide();
    }
    else{
-   EventCount += 1;
+      EventCount += 1;
    }
 }
 
