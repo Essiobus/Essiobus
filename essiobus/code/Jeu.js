@@ -9,9 +9,9 @@ const croix = "images/croix2.png";
 const aide = "images/PanalAide.png";
 const arret = "images/arret.png";
 
-var randomtime = Math.random(10000,15000);
+
 //demarre l'intervale en appelant la fonction qui sera executé et son temps d'execution
-var timedevent = setInterval(eventwarning, randomtime); 
+var timedevent = setInterval(eventwarning, Math.random(10000,15000)); 
 
 function preload() {
 fondHome = loadImage("images/Jeu.png");
@@ -67,7 +67,7 @@ function stoptest(){
 
 function eventstop(){
    stop = createImg(arret,'stoptest');
-   stop.position(70,190).mousePressed(stoptest);
+   stop.position(100,190).mousePressed(stoptest);
     
    if (EventCount >= 3) {
       clearInterval(timedevent); //stop l'intervale
