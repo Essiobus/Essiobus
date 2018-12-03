@@ -3,28 +3,37 @@ var CroixFermer;
 var help;
 var warning;
 var stop;
+var timedevent;
 var EventCount = 0;
 const warningpanel = "images/incident.png";
 const croix = "images/croix2.png";
 const aide = "images/PanalAide.png";
 const arret = "images/arret.png";
+
+var randomevent;
+
 var Largeur = [130 , 200, 270, 340, 410, 480, 550, 620, 690];
 var Hauteur = [77 , 137, 197, 257, 317, 377];
-var randomevent;
 // 77 : Ligne rouge
 // 137 : Ligne Orange
 // 197 : Ligne Jaune
 // 257 : Ligne verte
 // 317 : Ligne bleue
 // 377 : Ligne rose
+
+
  var randomtime = getRndInteger(1000,5000);
-  //demarre l'intervale en appelant la fonction qui sera executé et son temps d'execution
-  var timedevent;
+// genère un temps aléatoire entre une valeur minimum et une valeur maximum
+
+
 
 function preload() {
 fondHome = loadImage("images/Jeu.png");
+//préchargement de l'image de fond
 CroixFermer = createImg(croix, 'fermer');
+//préchargement de l'icone croix pour fermer
 help = createImg(aide, 'info');
+//préchargement de l'icone aide pour se documenter
 }
 
 function setup() {
