@@ -9,9 +9,15 @@ const croix = "images/croix2.png";
 const aide = "images/PanalAide.png";
 const arret = "images/arret.png";
 
+var enigmes = ['eventwarning','eventstop'];
+var randomevent;
+randomevent = int(random(0,1));
+var randomtime = getRndInteger(1000,5000);
+var generateevent = engimes[randomevent];
+alert('e');
 
 //demarre l'intervale en appelant la fonction qui sera executé et son temps d'execution
-var timedevent = setInterval(eventwarning, Math.random(10000,15000)); 
+var timedevent = setInterval((enigmes[randomevent]),randomtime); 
 
 function preload() {
 fondHome = loadImage("images/Jeu.png");
@@ -41,12 +47,9 @@ function info(){
 window.open("info.html");
 }
 
-function clignottement(){
-   
-}
 
 function incident(){
-  window.open("enigme1.html")
+  //window.open("enigme1.html")
    alert('Nombre alerte : '+EventCount);
    if (EventCount >= 3) {
       clearInterval(timedevent); //stop l'intervale
@@ -72,6 +75,7 @@ function eventstop(){
     
    if (EventCount >= 3) {
       clearInterval(timedevent); //stop l'intervale
+      stop.hide();
    }
    else{
    EventCount += 1;
@@ -81,8 +85,7 @@ function eventstop(){
 function eventwarning(){
    warning = createImg(warningpanel,'incident');
    warning.position(50,190).mousePressed(incident);
-   // clearInterval(timedevent); //stop l'intervale
-   timedevent = setInterval(eventstop, 1000);
+   
   
    if(EventCount >= 3){
       clearInterval(timedevent); //stop l'intervale
@@ -90,5 +93,9 @@ function eventwarning(){
    else{
    EventCount += 1;
    }
+}
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
