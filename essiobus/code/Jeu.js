@@ -5,6 +5,7 @@ var warning;
 var stop;
 var timedevent;
 var EventCount = 0;
+var Brandom;
 const warningpanel = "images/incident.png";
 const croix = "images/croix2.png";
 const aide = "images/PanalAide.png";
@@ -56,7 +57,7 @@ function draw() {
     timedevent = setInterval(eventwarning,randomtime);
     randomtime = getRndInteger(1000,5000);
   }
-  
+  Brandom = parseInt(random(0,11));
   //text(randomevent,500,600);
 }
 
@@ -74,13 +75,58 @@ window.open("info.html");
 
 
 function incident(){
-  //window.open("enigme1.html")
+
    alert('Nombre alerte : '+EventCount);
+   // !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
+   if (Brandom == 0)
+   { window.open("enigme1.html")}
+   else if (Brandom == 1)
+   { window.open("enigme2.html")}
+    else if (Brandom == 2)
+   { window.open("enigme3.html")}
+    else if (Brandom == 3)
+   { window.open("enigme4.html")}
+    else if (Brandom == 4)
+   { window.open("enigme5.html")}
+    else if (Brandom == 5)
+   { window.open("enigme6.html")}
+    else if (Brandom == 6)
+   { window.open("enigme7.html")}
+    else if (Brandom == 7)
+   { window.open("enigme8.html")}
+    else if (Brandom == 8)
+   { window.open("enigme9.html")}
+    else if (Brandom == 9)
+   { window.open("enigme10.html")}
+   // !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
 }
+
 
 function stoptest(){
    alert('Nombre d"alerte' +EventCount);
 
+   // !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
+if (Brandom == 0)
+   { window.open("enigme1.html")}
+   else if (Brandom == 1)
+   { window.open("enigme2.html")}
+    else if (Brandom == 2)
+   { window.open("enigme3.html")}
+    else if (Brandom == 3)
+   { window.open("enigme4.html")}
+    else if (Brandom == 4)
+   { window.open("enigme5.html")}
+    else if (Brandom == 5)
+   { window.open("enigme6.html")}
+    else if (Brandom == 6)
+   { window.open("enigme7.html")}
+    else if (Brandom == 7)
+   { window.open("enigme8.html")}
+    else if (Brandom == 8)
+   { window.open("enigme9.html")}
+    else if (Brandom == 9)
+   { window.open("enigme10.html")}
+// !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
 }
 
 function eventstop(){
@@ -93,6 +139,9 @@ function eventstop(){
    else{
    EventCount += 1;
    }
+   
+
+   
 }
 
 function eventwarning(){
