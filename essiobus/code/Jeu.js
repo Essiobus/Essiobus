@@ -79,7 +79,7 @@ function incident(){
 }
 
 function stoptest(){
-   alert(' Nombre d"alerte' +EventCount);
+   alert('Nombre d"alerte' +EventCount);
 
 }
 
