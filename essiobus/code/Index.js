@@ -12,6 +12,7 @@ start=createImg(debut, 'debutJeu');
 }
 
 
+
 function setup() {
 createCanvas(800, 600);
   help.position(5,0).mousePressed(info);
@@ -20,7 +21,6 @@ createCanvas(800, 600);
 function draw() {
   background(0);
 image(fond, 0, 0);
-
 
 }
 

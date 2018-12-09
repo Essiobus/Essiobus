@@ -17,15 +17,24 @@ Q3=createImg(question3, 'choix3');
 
 function setup() {
 createCanvas(800, 600);
-  Q1.position(70,201).mousePressed(Test);
-  Q2.position(70,291).mousePressed(Test);
-  Q3.position(66,380).mousePressed(Test);
+  Q1.position(70,201).mousePressed(Bon);
+  Q2.position(70,291).mousePressed(Bon);
+  Q3.position(66,380).mousePressed(Bon);
 }
 function draw() {
   background(0);
 image(fond, 0, 0);
 }
 
-function Test(){
-alert('Ça marche fraté');
+function Bon(){
+alert('Bonne réponse');
+Reponse=1;
+//alert(Reponse);
+window.close();
+}
+
+function Mauvais(){
+alert('Mauvaise réponse');
+Reponse=0;
+window.close();
 }

@@ -24,7 +24,7 @@ createCanvas(800, 600);
 function draw() {
   background(0);
 image(fond, 0, 0);
-
+//text("test", 500,280);
 
 }
 

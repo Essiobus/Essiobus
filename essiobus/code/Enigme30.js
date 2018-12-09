@@ -19,16 +19,25 @@ Q4=createImg(question4, 'choix4');
 
 function setup() {
 createCanvas(800, 600);
-  Q1.position(62,253).mousePressed(Test);
-  Q2.position(415,250).mousePressed(Test);
-  Q3.position(58,360).mousePressed(Test);
-  Q4.position(415,365).mousePressed(Test);
+  Q1.position(62,253).mousePressed(Mauvais);
+  Q2.position(415,250).mousePressed(Mauvais);
+  Q3.position(58,360).mousePressed(Mauvais);
+  Q4.position(415,365).mousePressed(Bon);
 }
 function draw() {
   background(0);
 image(fond, 0, 0);
 }
 
-function Test(){
-alert('Ça marche fraté');
+function Bon(){
+alert('Bonne réponse');
+Reponse=1;
+//alert(Reponse);
+window.close();
+}
+
+function Mauvais(){
+alert('Mauvaise réponse');
+Reponse=0;
+window.close();
 }

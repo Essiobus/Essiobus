@@ -2,13 +2,13 @@ var fond;
 var Q1;
 var Q2;
 var Q3;
-const question1= "images/enigmes/reponse/Q23-1.png";
-const question2= "images/enigmes/reponse/Q23-2.png";
-const question3= "images/enigmes/reponse/Q23-3.png";
+const question1= "images/enigmes/reponse/Q13-1.png";
+const question2= "images/enigmes/reponse/Q13-2.png";
+const question3= "images/enigmes/reponse/Q13-3.png";
 
 
 function preload() {
-fond = loadImage("images/enigmes/reponse/Q23-Question.png");
+fond = loadImage("images/enigmes/reponse/Q13-Question.png");
 Q1=createImg(question1, 'choix1');
 Q2=createImg(question2, 'choix2');
 Q3=createImg(question3, 'choix3');
@@ -24,6 +24,10 @@ createCanvas(800, 600);
 function draw() {
   background(0);
 image(fond, 0, 0);
+}
+
+function Test(){
+alert('Ça marche fraté');
 }
 
 function Bon(){

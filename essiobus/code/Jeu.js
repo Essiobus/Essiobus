@@ -1,3 +1,6 @@
+var toast=0;
+var Reponse=0;
+
 var fondHome;
 var CroixFermer;
 var help;
@@ -10,6 +13,7 @@ const warningpanel = "images/incident.png";
 const croix = "images/croix2.png";
 const aide = "images/PanalAide.png";
 const arret = "images/arret.png";
+
 
 var randomevent;
 
@@ -57,15 +61,17 @@ function draw() {
     timedevent = setInterval(eventwarning,randomtime);
     randomtime = getRndInteger(1000,5000);
   }
-  Brandom = parseInt(random(0,30));
+  Brandom = parseInt(random(0,31));
   //text(randomevent,500,600);
 }
 
 
 function fermer(){
+  alert(toast);
 //alert('Ça marche fraté');
 if(confirm('Voulez-vous réellement quitter la partie ?'))
   document.location.href="fin.html";
+
 }
 
 function info(){
@@ -79,7 +85,7 @@ function incident(){
    //alert('Nombre alerte : '+EventCount);
 
    // selection aléatoire d'une enigme
-   if (Brandom === 0)
+  if (Brandom === 0)
    { window.open("enigme1.html")}
    else if (Brandom == 1)
    { window.open("enigme2.html")}
@@ -139,7 +145,9 @@ function incident(){
    { window.open("enigme29.html")}
      else if (Brandom == 29)
    { window.open("enigme30.html")}
-
+    
+    if (Reponse !== 0)
+  {toast += 50}
 }
 
 
@@ -207,6 +215,11 @@ if (Brandom === 0)
    { window.open("enigme29.html")}
      else if (Brandom == 29)
    { window.open("enigme30.html")}
+   
+    if (Reponse !== 0)
+  {toast += 50}
+
+   
 }
 
 function eventstop(){
