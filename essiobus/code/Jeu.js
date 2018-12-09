@@ -57,7 +57,7 @@ function draw() {
     timedevent = setInterval(eventwarning,randomtime);
     randomtime = getRndInteger(1000,5000);
   }
-  Brandom = parseInt(random(0,11));
+  Brandom = parseInt(random(0,30));
   //text(randomevent,500,600);
 }
 
@@ -77,8 +77,8 @@ window.open("info.html");
 function incident(){
 
    alert('Nombre alerte : '+EventCount);
-   // !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
-   if (Brandom == 0)
+
+   if (Brandom === 0)
    { window.open("enigme1.html")}
    else if (Brandom == 1)
    { window.open("enigme2.html")}
@@ -98,7 +98,47 @@ function incident(){
    { window.open("enigme9.html")}
     else if (Brandom == 9)
    { window.open("enigme10.html")}
-   // !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
+    else if (Brandom == 10)
+   { window.open("enigme11.html")}
+    else if (Brandom == 11)
+   { window.open("enigme12.html")}
+    else if (Brandom == 12)
+   { window.open("enigme13.html")}
+    else if (Brandom == 13)
+   { window.open("enigme14.html")}
+    else if (Brandom == 14)
+   { window.open("enigme15.html")}
+    else if (Brandom == 15)
+   { window.open("enigme16.html")}
+    else if (Brandom == 16)
+   { window.open("enigme17.html")}
+    else if (Brandom == 17)
+   { window.open("enigme18.html")}
+    else if (Brandom == 18)
+   { window.open("enigme19.html")}
+    else if (Brandom == 19)
+   { window.open("enigme20.html")}
+    else if (Brandom == 20)
+   { window.open("enigme21.html")}
+    else if (Brandom == 21)
+   { window.open("enigme22.html")}
+    else if (Brandom == 22)
+   { window.open("enigme23.html")}
+    else if (Brandom == 23)
+   { window.open("enigme24.html")}
+     else if (Brandom == 24)
+   { window.open("enigme25.html")}
+     else if (Brandom == 25)
+   { window.open("enigme26.html")}
+     else if (Brandom == 26)
+   { window.open("enigme27.html")}
+     else if (Brandom == 27)
+   { window.open("enigme28.html")}
+     else if (Brandom == 28)
+   { window.open("enigme29.html")}
+     else if (Brandom == 29)
+   { window.open("enigme30.html")}
+
 }
 
 
@@ -106,7 +146,7 @@ function stoptest(){
    alert('Nombre d"alerte' +EventCount);
 
    // !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
-if (Brandom == 0)
+if (Brandom === 0)
    { window.open("enigme1.html")}
    else if (Brandom == 1)
    { window.open("enigme2.html")}
@@ -126,7 +166,46 @@ if (Brandom == 0)
    { window.open("enigme9.html")}
     else if (Brandom == 9)
    { window.open("enigme10.html")}
-// !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
+   else if (Brandom == 10)
+   { window.open("enigme11.html")}
+    else if (Brandom == 11)
+   { window.open("enigme12.html")}
+    else if (Brandom == 12)
+   { window.open("enigme13.html")}
+    else if (Brandom == 13)
+   { window.open("enigme14.html")}
+    else if (Brandom == 14)
+   { window.open("enigme15.html")}
+    else if (Brandom == 15)
+   { window.open("enigme16.html")}
+    else if (Brandom == 16)
+   { window.open("enigme17.html")}
+    else if (Brandom == 17)
+   { window.open("enigme18.html")}
+    else if (Brandom == 18)
+   { window.open("enigme19.html")}
+    else if (Brandom == 19)
+   { window.open("enigme20.html")}
+    else if (Brandom == 20)
+   { window.open("enigme21.html")}
+    else if (Brandom == 21)
+   { window.open("enigme22.html")}
+    else if (Brandom == 22)
+   { window.open("enigme23.html")}
+    else if (Brandom == 23)
+   { window.open("enigme24.html")}
+     else if (Brandom == 24)
+   { window.open("enigme25.html")}
+     else if (Brandom == 25)
+   { window.open("enigme26.html")}
+     else if (Brandom == 26)
+   { window.open("enigme27.html")}
+     else if (Brandom == 27)
+   { window.open("enigme28.html")}
+     else if (Brandom == 28)
+   { window.open("enigme29.html")}
+     else if (Brandom == 29)
+   { window.open("enigme30.html")}
 }
 
 function eventstop(){
