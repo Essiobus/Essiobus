@@ -76,8 +76,9 @@ window.open("info.html");
 
 function incident(){
 
-   alert('Nombre alerte : '+EventCount);
+   //alert('Nombre alerte : '+EventCount);
 
+   // selection aléatoire d'une enigme
    if (Brandom === 0)
    { window.open("enigme1.html")}
    else if (Brandom == 1)
@@ -143,9 +144,9 @@ function incident(){
 
 
 function stoptest(){
-   alert('Nombre d"alerte' +EventCount);
+   //alert('Nombre d"alerte' +EventCount);
 
-   // !!!!!!!!!  enigme 3,4,5,6,7 non montées  !!!!!!!
+   // selection aléatoire d'une enigme
 if (Brandom === 0)
    { window.open("enigme1.html")}
    else if (Brandom == 1)
