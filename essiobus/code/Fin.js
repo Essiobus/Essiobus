@@ -20,12 +20,17 @@ createCanvas(800, 600);
   help.position(5,0).mousePressed(info);
   restart.position(25,425).mousePressed(redebutJeu);
   acceuil.position(450,425).mousePressed(IndexJeu);
+  textFont("Calibri", 400);
+  textSize(80);
+  fill(255)
+
 }
 function draw() {
   background(0);
 image(fond, 0, 0);
 //text("test", 500,280);
-
+text(score, 480, 290);
+ 
 }
 
 function info(){

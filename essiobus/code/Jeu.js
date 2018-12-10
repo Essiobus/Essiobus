@@ -1,6 +1,3 @@
-var toast=0;
-var Reponse=0;
-
 var fondHome;
 var CroixFermer;
 var help;
@@ -14,7 +11,8 @@ const croix = "images/croix2.png";
 const aide = "images/PanalAide.png";
 const arret = "images/arret.png";
 
-
+//var test=document.cookie;
+//var test2 = test2 + test
 var randomevent;
 
 var Largeur = [130 , 200, 270, 340, 410, 480, 550, 620, 690];
@@ -26,11 +24,10 @@ var Hauteur = [77 , 137, 197, 257, 317, 377];
 // 317 : Ligne bleue
 // 377 : Ligne rose
 
+var fin=0;
 
  var randomtime = getRndInteger(1000,5000);
 // genère un temps aléatoire entre une valeur minimum et une valeur maximum
-
-
 
 function preload() {
 fondHome = loadImage("images/Jeu.png");
@@ -45,7 +42,8 @@ function setup() {
 createCanvas(800, 600);
    CroixFermer.position(772,4).mousePressed(fermer);
    help.position(350,480).mousePressed(info);
-
+if (fin >5)
+{document.location.href="fin.html"}
 }
 function draw() {
    background(0);
@@ -67,7 +65,10 @@ function draw() {
 
 
 function fermer(){
-  alert(toast);
+  //alert(toast);
+ // alert(score);
+
+  //window.open("enigme3.html")
 //alert('Ça marche fraté');
 if(confirm('Voulez-vous réellement quitter la partie ?'))
   document.location.href="fin.html";
@@ -81,11 +82,13 @@ window.open("info.html");
 
 
 function incident(){
-
+ fin = fin + 1;
+ //alert(fin);
    //alert('Nombre alerte : '+EventCount);
-
-   // selection aléatoire d'une enigme
-  if (Brandom === 0)
+if (fin >5)
+{document.location.href="fin.html"}
+// selection aléatoire d'une enigme
+ else{      if (Brandom === 0)
    { window.open("enigme1.html")}
    else if (Brandom == 1)
    { window.open("enigme2.html")}
@@ -145,15 +148,16 @@ function incident(){
    { window.open("enigme29.html")}
      else if (Brandom == 29)
    { window.open("enigme30.html")}
-    
-    if (Reponse !== 0)
-  {toast += 50}
+}
 }
 
-
 function stoptest(){
-   //alert('Nombre d"alerte' +EventCount);
-
+fin = fin + 1;
+//alert(fin);
+   //alert('Nombre alerte : '+EventCount);
+if (fin >5)
+{document.location.href="fin.html"}
+else{
    // selection aléatoire d'une enigme
 if (Brandom === 0)
    { window.open("enigme1.html")}
@@ -215,11 +219,7 @@ if (Brandom === 0)
    { window.open("enigme29.html")}
      else if (Brandom == 29)
    { window.open("enigme30.html")}
-   
-    if (Reponse !== 0)
-  {toast += 50}
-
-   
+}  
 }
 
 function eventstop(){
@@ -232,9 +232,6 @@ function eventstop(){
    else{
    EventCount += 1;
    }
-   
-
-   
 }
 
 function eventwarning(){
@@ -252,4 +249,3 @@ function eventwarning(){
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-

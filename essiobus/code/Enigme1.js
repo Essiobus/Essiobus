@@ -5,6 +5,8 @@ var Q2;
 const question1= "images/enigmes/reponse/Q1-1.png";
 const question2= "images/enigmes/reponse/Q1-2.png";
 
+var machin=document.cookie;
+
 function preload() {
 fond = loadImage("images/enigmes/reponse/Q1-Question.png");
 Q1=createImg(question1, 'choix1');
@@ -24,9 +26,9 @@ function draw() {
 
 function Bon(){
 alert('Bonne réponse');
-Reponse =+ 1;
-
-alert(Reponse);
+//Reponse = 1;
+score+=50;
+//alert(score);
 window.close();
 }
 

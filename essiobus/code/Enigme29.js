@@ -31,13 +31,11 @@ image(fond, 0, 0);
 
 function Bon(){
 alert('Bonne réponse');
-Reponse=1;
-//alert(Reponse);
+score+=50;
 window.close();
 }
 
 function Mauvais(){
 alert('Mauvaise réponse');
-Reponse=0;
 window.close();
 }
